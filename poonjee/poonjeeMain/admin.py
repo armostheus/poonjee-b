@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Poonjee_Users, User_Credentials
+
+admin.site.register(Poonjee_Users)
+admin.site.register(User_Credentials)
