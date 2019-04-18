@@ -28,7 +28,7 @@ class ProductLocationSerializer(serializers.ModelSerializer):
         model = Product_Location
         fields = '__all__' 
 
-class ProductShelfDurationSerializer(serializer.ModelSerializer):
+class ProductShelfDurationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product_Shelf_Duration
         fields = '__all__'

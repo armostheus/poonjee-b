@@ -4,10 +4,8 @@ from .api import UserCredentialsViewset, PoonjeeUsersViewset
 
 from . import views
 
-routerUC = routers.DefaultRouter()
-routerUC.register('api/UserCredentials', UserCredentialsViewset, 'poonjeeMain')
+router = routers.DefaultRouter()
+router.register('apiv1/UserCredentials', UserCredentialsViewset, 'poonjeeMain')
+router.register('apiv1/PoonjeeUsers', PoonjeeUsersViewset, 'poonjeeMain')
 
-routerPU = routers.DefaultRouter()
-routerPU.register('api/PoonjeeUsers', PoonjeeUsersViewset, 'poonjeeMain')
-
-urlpatterns = routerUC.urls
+urlpatterns = router.urls

@@ -72,7 +72,7 @@ class Sales_Transactions(models.Model):
     createdAt = models.DateTimeField(auto_now_add=True, blank=False)
 
 class Sales_Details(models.Model):
-    transaction_id = models.IntegerField()
+    transaction_id = models.ForeignKey(Sales_Transactions, on_delete=models.CASCADE)
     barcode = models.CharField(max_length=150, blank=False)
     cost_price = models.DecimalField(max_digits=22, decimal_places=2, blank=False, null=False)
     selling_price = models.DecimalField(max_digits=22, decimal_places=2, blank=False, null=False)
