@@ -23,6 +23,15 @@ class User_Credentials(models.Model):
     def __str__(self):
         return (self.password)
 
+class Companies(models.Model):
+    name = models.CharField(max_length=50, blank=False)
+    desc = models.CharField(max_length=200, blank=True)
+    createdAt = models.DateTimeField(auto_now_add=True, blank=False)
+    updatedAt = models.DateTimeField(auto_now_add=True, blank=False)
+
+class Users_Companies_Access(models.Model):
+    
+
 class Inventories(models.Model):
     inventory_name = models.CharField(max_length=30, blank=False)        
     description = models.CharField(max_length=100, blank=True)
